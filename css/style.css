@@ -1,0 +1,9 @@
+
+
+/* define custom font */
+@font-face{
+	font-family:'SkipStd-B', Tahoma, sans-serif;
+	src: url(../font/FOT-SkipStd-B.otf);
+	font-weight:normal;
+	font-style:normal;
+}
