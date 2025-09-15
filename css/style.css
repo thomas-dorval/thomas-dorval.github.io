@@ -2,7 +2,13 @@
 
 /* define custom font */
 @font-face{
-	font-family: SkipStd-B, Tahoma, sans-serif;
+	font-family: 'SkipStd-B', Tahoma, sans-serif;
+	font-style: normal;
 	font-weight: bold;
-	src: url(../font/FOT-SkipStd-B.otf) format("opentype");
+	src: local('SkipStd-B'), url(../font/FOT-SkipStd-B.otf) format("opentype");
+}
+
+html{
+	font: 'SkipStd-B';
+	font-family: 'SkipStd-B', Tahoma, sans-serif;
 }
