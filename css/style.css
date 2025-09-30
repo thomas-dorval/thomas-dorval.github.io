@@ -35,6 +35,12 @@ header{
 	text-align: right;
 	color: #00FFFC;
 	background-color: #151D42;
+	transition: 0.3s;
+}
+
+header:hover{
+	color:#151D42;
+	background-color: white;
 }
 
 #content-container{
@@ -51,6 +57,17 @@ header{
 
 #navbar ul{
 	list-style-type: none;
+	text-decoration: none;
+}
+
+#navbar li{
+	width: 100%;
+}
+
+#navbar li:hover{
+	color:#151D42;
+	background-color: white;
+	transition: 0.3s;
 }
 
 #blog{
@@ -58,6 +75,13 @@ header{
 	background-color: #151D42;
 	height: 100%;
 	margin-left: 16%;
+	padding: 0 1%;
+	transition: 0.3s;
+}
+
+#blog:hover{
+	color:#151D42;
+	background-color: white;
 }
 
 footer{
@@ -65,4 +89,10 @@ footer{
 	background-color: #151D42;
 	bottom: 0;
 	margin-left: var(--navbar-margin);
+	transition: 0.3s;
+}
+
+footer:hover{
+	color:#151D42;
+	background-color: white;
 }
