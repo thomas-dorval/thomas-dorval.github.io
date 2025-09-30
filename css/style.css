@@ -11,4 +11,58 @@
 html{
 	font: 'FOT-SkipStd-B';
 	font-family: 'FOT-SkipStd-B';
+	/*background-image: linear-gradient(to top, #0004AE 10%, #0047C0 60%, #22F9FD );
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;*/
+	background-image: url(../img/makoto1.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: #0004AE;
+	height: 100%;
+}
+
+body{
+	
+	height: 70%;
+	width: 58%
+}
+
+header{
+	text-align: right;
+	color: #00FFFC;
+	background-color: #151D42;
+}
+
+#content-container{
+	height: 100%;
+}
+
+#navbar{
+	height: 100%;
+	width: 15%;
+	float: left;
+	color: #00FFFC;
+	background-color: #151D42;
+}
+
+#navbar ul{
+	list-style-type: none;
+}
+
+#blog{
+	color: #00FFFC;
+	background-color: #151D42;
+	height: 100%;
+	margin-left: 16%;
+}
+
+footer{
+	color: #00FFFC;
+	background-color: #151D42;
+	bottom: 0;
+	margin-left: var(--navbar-margin);
 }
