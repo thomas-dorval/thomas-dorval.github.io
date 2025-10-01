@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wdth,wght@1,6..12,75,900&display=swap');
 
 /* define custom font */
 @font-face{
@@ -6,6 +6,12 @@
 	font-style: normal;
 	font-weight: bold;
 	src: url(../font/FOT-SkipStd-B.otf) format("opentype");
+}
+
+:root{
+	--persona-dark-blue: #151D42;
+	--persona-light-blue: #00FFFC;
+	--persona-menu-blue: #90e1f2;
 }
 
 html{
@@ -25,39 +31,49 @@ html{
 	height: 100%;
 }
 
-body{
-	
-	height: 70%;
-	width: 58%
+#content-container{
+	height: 100%;
+	display: grid;
+	grid-template-areas: 'menu main';
+	grid-gap: 10px;
 }
 
 header{
 	text-align: right;
-	color: #00FFFC;
-	background-color: #151D42;
+	color: var(--persona-light-blue);
+	background-color: var(--persona-dark-blue);
 	transition: 0.3s;
+	width: 70%;
+	transform: translateX(-10%);
+	border-radius: 0px 10px 10px 0px;
+	padding-right: 15px;
+	box-sizing: border-box;
 }
 
 header:hover{
-	color:#151D42;
+	color:var(--persona-dark-blue);
 	background-color: white;
 }
 
-#content-container{
-	height: 100%;
+a{
+	text-decoration: none;
+	color: var(--persona-light-blue);
 }
 
 #navbar{
 	height: 100%;
-	width: 15%;
 	float: left;
-	color: #00FFFC;
-	background-color: #151D42;
+	box-sizing: border-box;
+	color: var(--persona-menu-blue);
+	font-family: "Nunito Sans", sans-serif;
+	font-style: italic;
+	font-size: 30px;
+	/*background-color: var(--persona-dark-blue);*/
+	grid-area: menu;
 }
 
 #navbar ul{
 	list-style-type: none;
-	text-decoration: none;
 }
 
 #navbar li{
@@ -65,34 +81,56 @@ header:hover{
 }
 
 #navbar li:hover{
-	color:#151D42;
-	background-color: white;
-	transition: 0.3s;
+	
 }
 
-#blog{
-	color: #00FFFC;
-	background-color: #151D42;
+#blog, #contact-info, #about-content{
+	color: var(--persona-light-blue);
+	background-color: var(--persona-dark-blue);
 	height: 100%;
-	margin-left: 16%;
-	padding: 0 1%;
 	transition: 0.3s;
+	border-radius: 15px;
+	padding: 0 15px;
+	grid-area: main;
+}
+
+h2{
+	margin: 0;
+}
+
+small{
+	margin: 0;
+}
+
+hr{
+	color: var(--persona-light-blue);
 }
 
 #blog:hover{
-	color:#151D42;
+	color:var(--persona-dark-blue);
 	background-color: white;
 }
 
 footer{
-	color: #00FFFC;
-	background-color: #151D42;
+	color: #B5B5B5;
+	background-color: white;
+	position: fixed;
 	bottom: 0;
-	margin-left: var(--navbar-margin);
-	transition: 0.3s;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
 }
 
-footer:hover{
-	color:#151D42;
-	background-color: white;
+#status{
+	font-family: "Nunito Sans", sans-serif;
+	font-style: italic;
+	font-size: 5em;
+	padding: 0;
+	float: left;
+}
+
+#copyright{
+	position:absolute;
+	bottom: 0;
+	right: 0;
 }
