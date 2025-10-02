@@ -35,7 +35,10 @@ html{
 	height: 100%;
 	display: grid;
 	grid-template-areas: 'menu main';
-	grid-gap: 10px;
+	grid-column-gap: 10px;
+	width: 50%;
+	float: left;
+	margin: 0;
 }
 
 header{
@@ -62,6 +65,7 @@ a{
 
 #navbar{
 	height: 100%;
+	width: fit-content;
 	float: left;
 	box-sizing: border-box;
 	color: var(--persona-menu-blue);
@@ -70,18 +74,78 @@ a{
 	font-size: 30px;
 	/*background-color: var(--persona-dark-blue);*/
 	grid-area: menu;
+	margin: 0;
 }
 
 #navbar ul{
 	list-style-type: none;
 }
 
-#navbar li{
-	width: 100%;
+li a{
+	display: inline-block;
 }
 
-#navbar li:hover{
-	
+#home{
+	width: min-content;
+}
+
+
+
+#home-link-higher{
+	visibility: hidden;
+	position: absolute;
+	left: 48px;
+	color: red;
+	background-color: white;
+	clip-path: polygon(100% 7%, 0 63%, 93% 38%);
+}
+
+#home:hover #home-link-higher{
+	visibility: visible;
+	transition: 0.12s;
+}
+
+#home:hover #home-link-lower{
+	color: black;
+	transition: color 0.12s ease-in-out;
+}
+
+#about-link-higher{
+	visibility: hidden;
+	position: absolute;
+	left: 48px;
+	color: red;
+	background-color: white;
+	clip-path: polygon(100% 7%, 0 63%, 93% 38%);
+}
+
+#about:hover #about-link-higher{
+	visibility: visible;
+	transition: 0.12s;
+}
+
+#about:hover #about-link-lower{
+	color: black;
+	transition: color 0.12s ease-in-out;
+}
+
+#contact-link-higher{
+	visibility: hidden;
+	position: absolute;
+	left: 48px;
+	color: red;
+	background-color: white;
+	clip-path: polygon(100% 7%, 0 63%, 93% 38%);
+}
+
+#contact:hover #contact-link-higher{
+	visibility: visible;
+	transition: 0.12s;
+}
+
+#contact:hover #contact-link-lower{
+	color: black;
+	transition: color 0.12s ease-in-out;
 }
 
 #blog, #contact-info, #about-content{
@@ -111,6 +175,10 @@ hr{
 	background-color: white;
 }
 
+#blog:hover hr{
+	color: var(--persona-dark-blue);
+}
+
 footer{
 	color: #B5B5B5;
 	background-color: white;
@@ -133,4 +201,30 @@ footer{
 	position:absolute;
 	bottom: 0;
 	right: 0;
+}
+
+.dot {
+	height: 50px;
+	width: 50px;
+	background-color: black;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+#menu-dot-1{
+	height: 50px;
+	width: 50px;
+	translate: -150px -100px;
+	background-color: white;
+}
+
+#menu-dot-2{
+	height: 42px;
+	width: 42px;
+	translate: 4px 4px;
+	background-color: var(--persona-dark-blue);
+}
+
+#menu-dot-2 img{
+	translate: 2px 1px;
 }
