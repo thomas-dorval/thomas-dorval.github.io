@@ -170,7 +170,7 @@ hr{
 	color: var(--persona-light-blue);
 }
 
-#blog:hover{
+#blog:hover, #contact-info:hover, #about-content:hover{
 	color:var(--persona-dark-blue);
 	background-color: white;
 }
