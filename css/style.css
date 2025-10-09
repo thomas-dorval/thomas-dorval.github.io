@@ -8,6 +8,13 @@
 	src: url(../font/FOT-SkipStd-B.otf) format("opentype");
 }
 
+@font-face {
+	font-family: 'FOT-Rodin-Pro-EB';
+	font-style: normal;
+	font-weight: bold;
+	src: url(../font/FOT-Rodin-Pro-EB.otf) format("opentype");
+}
+
 :root{
 	--persona-dark-blue: #151D42;
 	--persona-light-blue: #00FFFC;
@@ -25,13 +32,17 @@ html{
 	background-image: url(../img/makoto1.gif);
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position: left;
 	background-attachment: fixed;
 	background-color: #0004AE;
 	height: 100%;
 }
 
-#content-container{
+body{
+	margin: 0;
+}
+
+/*#content-container{
 	height: 100%;
 	display: grid;
 	grid-template-columns: auto 100%;
@@ -39,24 +50,47 @@ html{
 	width: 50%;
 	float: left;
 	margin: 0;
-}
+}*/
 
 header{
 	text-align: right;
 	color: var(--persona-light-blue);
 	background-color: var(--persona-dark-blue);
 	transition: 0.3s;
-	width: 70%;
+
 	transform: translateX(-10%);
 	border-radius: 0px 10px 10px 0px;
 	padding-right: 15px;
-	padding-left: 10%;
+	padding-left: 40%;
 	box-sizing: border-box;
+	height: min-content;
+	position: fixed;
+	white-space: nowrap;
+	overflow: hidden;
+	z-index: 2;
+	margin-top: 20px;
 }
 
 header:hover{
-	color:var(--persona-dark-blue);
+	color: var(--persona-dark-blue);
 	background-color: white;
+}
+
+/*.header-cover:hover header{
+	color: var(--persona-dark-blue);
+	background-color: white;
+}*/
+
+header h1{
+	margin: 0;
+}
+
+.header-cover{
+	width: 100%;
+	height: 90px;
+	position: relative;
+	display: inline-block;
+	z-index: -1;
 }
 
 #navbar{
@@ -68,14 +102,18 @@ header:hover{
 	font-family: "Nunito Sans", sans-serif;
 	font-style: italic;
 	font-size: 30px;
-	/*background-color: var(--persona-dark-blue);*/
+	/*background-color: var(--persona-dark-blue);
 	grid-column-start: 1;
-	grid-column-end: 2;
+	grid-column-end: 2;*/
 	margin: 0;
+	position: fixed;
+	top: 80px;
+	z-index: 1;
 }
 
 #navbar ul{
 	list-style-type: none;
+	padding: 11%;
 }
 
 a:not(.link-higher, .link-lower){
@@ -99,7 +137,7 @@ a:visited:not(.link-higher, .link-lower){
 .link-higher{
 	visibility: hidden;
 	position: absolute;
-	left: 48px;
+	left: 11%;
 	color: red;
 	background-color: white;
 	clip-path: polygon(100% 7%, 0 63%, 93% 38%);
@@ -124,7 +162,13 @@ a:visited:not(.link-higher, .link-lower){
 	padding: 0 15px;
 	grid-column-start: 2;
 	grid-column-end: 3;
+	/*float: left;*/
+	align-items: right;
+	justify-content: right;
+	width: 50%;
 	float: left;
+	margin-left: 200px;
+	z-index: 1;
 }
 
 article{
@@ -216,4 +260,22 @@ footer{
 
 #menu-dot-2 img{
 	translate: 2px 1px;
+}
+
+#bywhichallisrevealed{
+	font: 'FOT-Rodin-Pro-EB';
+	font-family: 'FOT-Rodin-Pro-EB';
+	font-style: normal;
+	text-align: center;
+	color: var(--persona-light-blue);
+	opacity: 50%;
+	font-size: 75pt;
+	line-height: 100%;
+	position: absolute;
+	bottom: 90px;
+	right: -30px;
+	margin-left: 60%;
+	white-space: nowrap;
+	overflow: hidden;
+	z-index: -2;
 }
